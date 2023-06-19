@@ -5,6 +5,7 @@ import {TiMediaPlay, TiMediaPlayReverse} from 'react-icons/ti'
 import {AiOutlineLine} from 'react-icons/ai'
 import ImageFooter from './ImageFooter';
 import ImageIcons from './ImageIcons'
+import CardButton from './CardButton'
 
 
 const CardSlider = ({ slides }) => {
@@ -76,6 +77,7 @@ const CardSlider = ({ slides }) => {
 
             <ImageFooter className="z-1"/>
             <ImageIcons className="z-1"/>
+            <CardButton/>
         </div>
     )
 }
