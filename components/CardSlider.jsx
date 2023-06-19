@@ -32,7 +32,6 @@ const CardSlider = ({ slides }) => {
 
     const moveToSlide = (slideIndex) => {
 
-        obj.style.backgroundColor="#D94A38"
         setCurrentIndex(slideIndex);
     }
 

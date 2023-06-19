@@ -18,14 +18,19 @@ const ImageFooter = ({slides}) => {
                                 <p className='text-[14px]'>£5,000,000 GBP</p>
                                 <p className='text-[9px]'>#ZM7861234567</p>
                         </div>
-                        <div  className='w-[30px] h-[30px]'>
+                        <div  className='w-[32px] h-[32px]'>
                         <img src={slides.discountImg} alt="" className='w-[100%] h-[100%] ' />
+                        
                         </div>
                         
                         </div>
                         <div className='w-[53px] h-[30px]'>
                         <img src={slides.footerImg} alt="logo" className='w-[100%] h-[100%] ' />
                         </div>
+
+                        {/* <div className=' text-white'>
+                        <p>{slides.footerImg}</p>
+                        </div> */}
                     </div>
                     
                 </div>
