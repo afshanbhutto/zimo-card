@@ -28,8 +28,12 @@ const ImageFooter = ({slides}) => {
                         <img src={slides.footerImg} alt="logo" className='w-[100%] h-[100%] ' />
                         </div>
 
-                        {/* <div className=' text-white'>
-                        <p>{slides.footerImg}</p>
+                        {/* <div className=' text-white w-[36px] h-[36px] absolute opacity-95 bg-[#1d1d1b] border-black border-[1px]
+                        border-solid' style={{
+
+backgroundImage: 'linear-gradient(90deg, #1d1d1b 0.00%, #312d22 16.48%, #655735 50.35%, #b99b54 98.31%, #bd9e56 100.00%, #931d80 100.00%)'
+}}>
+                        <p>23%</p>
                         </div> */}
                     </div>
                     
