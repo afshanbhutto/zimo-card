@@ -75,7 +75,7 @@ const CardSlider = ({ slides }) => {
                 }
             </div>
 
-            <ImageFooter className="z-1"/>
+            <ImageFooter className="z-1" slides={slides[currentIndex]}/>
             <ImageIcons className="z-1"/>
             <CardButton/>
         </div>

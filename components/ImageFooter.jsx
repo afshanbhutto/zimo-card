@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
 
-const ImageFooter = () => {
+const ImageFooter = ({slides}) => {
   return (
     <div className='bottom-0 left-0 h-[159px] w-[100%] absolute  rounded-b-[20px] flex flex-col opacity-80 bg-gradient-to-t from-[rgba(0,0,0,0.92)] via-[rgba(0,0,0,0.0)] to-[rgba(0,0,0,0)'>
                     
@@ -19,16 +19,17 @@ const ImageFooter = () => {
                                 <p className='text-[9px]'>#ZM7861234567</p>
                         </div>
                         <div  className='w-[30px] h-[30px]'>
-                        <img src="/assets/discount-img.png" alt="" className='w-[100%] h-[100%] ' />
+                        <img src={slides.discountImg} alt="" className='w-[100%] h-[100%] ' />
                         </div>
                         
                         </div>
-                        <div className='w-[45px] h-[40px]'>
-                        <img src="/assets/footer-yellow-savills.png" alt="logo" className='w-[100%] h-[100%] ' />
+                        <div className='w-[53px] h-[30px]'>
+                        <img src={slides.footerImg} alt="logo" className='w-[100%] h-[100%] ' />
                         </div>
                     </div>
                     
                 </div>
+                
   )
 }
 
