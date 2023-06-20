@@ -52,7 +52,7 @@ const MainSlider = () => {
     ]
   };
   return (
-    <div className="container bg-red-400 flex flex-col">
+    <div className="container flex flex-col">
       <div className="upperDiv flex justify-between items-center mx-auto mb-2 w-full uppercase  px-2 md:px-1">
         <div className="flex-1 text-left text-2xl tracking-[2px]  md:text-3xl">
           Featured
