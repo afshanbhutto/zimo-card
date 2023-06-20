@@ -36,7 +36,7 @@ export default function Home() {
     },
   ];
   return (
-    <div className="container w-full mx-auto  h-full">
+    <div className="container w-full mx-auto  h-full min-h-screen">
       <Slider slides={slides} />
     </div>
   );
