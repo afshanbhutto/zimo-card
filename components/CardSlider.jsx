@@ -63,10 +63,10 @@ const CardSlider = ({ slides }) => {
 
             {/* CARD */}
             <div id='slide' style={{ backgroundImage: `url(${slides[currentIndex].imgUrl})` }}
-                className='w-[100%] h-[100%] bg-center bg-cover rounded-[20px] scroll-smooth'></div>
+                className='w-[100%] h-[100%] bg-center bg-cover rounded-[20px] scroll-smooth transition ease-in'></div>
 
             {/* slideLines  */}
-            <div id="slideLines" className='flex justify-center absolute left-[30%] z-10 bottom-20  scroll-smooth'>
+            <div id="slideLines" className='flex justify-center absolute left-[30%] z-10 bottom-20  scroll-smooth transition ease-in'>
                 {
                     slides.map((slide, slideIndex) => (
                         <div key={slideIndex} className='mx-1  cursor-pointer scroll-smooth' onClick={() => moveToSlide(slideIndex)}>

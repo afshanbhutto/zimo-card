@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { mainSliderData } from "./mainSliderData";
@@ -8,6 +8,11 @@ import CardButton from "./CardButton";
 
 
 const MainSlider = () => {
+
+
+  // FOR ARROWS MOVEMENT
+  const sliderRef = useRef(null);
+
   const settings = {
     dots: false,
     infinite: true,
@@ -51,6 +56,19 @@ const MainSlider = () => {
       }
     ]
   };
+
+
+  const goToNextSlide = () => {
+    if (sliderRef.current) {
+      sliderRef.current.slickNext();
+    }
+  };
+
+  const goToPrevSlide = () => {
+    if (sliderRef.current) {
+      sliderRef.current.slickPrev();
+    }
+  };
   return (
     <div className="container flex flex-col">
       <div className="upperDiv flex justify-between items-center mx-auto mb-2 w-full uppercase  px-2 md:px-1">
@@ -61,12 +79,12 @@ const MainSlider = () => {
           View all Homes
         </div>
         <div className="flex-1  text-right  text-black text-5xl lg:text-6xl">
-          <span className="mr-4">&lt;</span>
-          <span>&gt;</span>
+          <span className="mr-4" onClick={goToPrevSlide}>&lt;</span>
+          <span onClick={goToNextSlide}>&gt;</span>
         </div>
       </div>
 
-      <Slider {...settings} >
+      <Slider {...settings} ref={sliderRef}>
         {mainSliderData.map(item => item.card)}
       </Slider>
 
