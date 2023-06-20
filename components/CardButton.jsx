@@ -2,7 +2,7 @@ import React from 'react'
 
 const CardButton = () => {
   return (
-    <div className='flex absolute  w-[100%] bottom-3  lg:bottom-3 flex-col items-center justify-between p-4 text-white h-[58.2px]   bg-black   rounded-[20px]'>
+    <div className='flex absolute  w-[100%] bottom-3  lg:bottom-20 flex-col items-center justify-between p-4 text-white h-[58.2px]   bg-black   rounded-[20px]'>
       {/* lg:bottom-20 */}
       <div className='flex flex-col w-full items-center justify-center  ' >
         <div className='flex justify-between w-full font-light text-[12px]  lg:text-[15px]  text-center'>
