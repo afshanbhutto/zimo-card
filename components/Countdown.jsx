@@ -41,14 +41,14 @@ const Countdown = ({ targetDate }) => {
   }, [targetDate]);
 
   return (
-    
-    <div className='absolute  text-white flex uppercase gap-8 text-center justify-center opacity-80 bg-gradient-to-b from-[#000000] via-[rgba(0,0,0,0.92)] to-[rgba(0,0,0,0.0)] rounded-[20px] w-[100%]'>
-      <div><div className="time text-[56px]"> 
+
+    <div className='absolute  text-white flex uppercase gap-4 lg:gap-5 text-center justify-center opacity-80 bg-gradient-to-b from-[#000000] via-[rgba(0,0,0,0.92)] to-[rgba(0,0,0,0.0)] rounded-[20px] w-[100%]'>
+      <div><div className="time text-[56px]">
         {countdownData.days} </div>
         <div className="timeInText text-[12px]">days</div></div>
-      <div><div className="time text-[56px]"> {countdownData.hours}</div> <div  className="timeInText text-[12px]">hours</div></div>
-      <div><div className="time text-[56px]"> {countdownData.minutes} </div><div  className="timeInText text-[12px]">minutes</div></div>
-      <div><div className="time text-[56px]"> {countdownData.seconds} </div><div  className="timeInText text-[12px]">seconds</div></div>
+      <div><div className="time text-[56px]"> {countdownData.hours}</div> <div className="timeInText text-[12px]">hours</div></div>
+      <div><div className="time text-[56px]"> {countdownData.minutes} </div><div className="timeInText text-[12px]">minutes</div></div>
+      <div><div className="time text-[56px]"> {countdownData.seconds} </div><div className="timeInText text-[12px]">seconds</div></div>
     </div>
   );
 };

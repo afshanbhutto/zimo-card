@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import Countdown from "@/components/Countdown";
 // import { BsChevronLeft, BsChevronRight } from 'react-icons/bs';
-import {TiMediaPlay, TiMediaPlayReverse} from 'react-icons/ti'
-import {AiOutlineLine} from 'react-icons/ai'
+import { TiMediaPlay, TiMediaPlayReverse } from 'react-icons/ti'
+import { AiOutlineLine } from 'react-icons/ai'
 import ImageFooter from './ImageFooter';
 import ImageIcons from './ImageIcons'
 import CardButton from './CardButton'
@@ -18,15 +18,15 @@ const CardSlider = ({ slides }) => {
     // images
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const moveToPrevious = () =>{
+    const moveToPrevious = () => {
         const isFirstSlide = currentIndex === 0;
-        const newIndex =  isFirstSlide ? slides.length -1 : currentIndex - 1;
+        const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
         setCurrentIndex(newIndex);
     }
 
-    const moveToNext = () =>{
-        const isLastSlide = currentIndex === slides.length -1;
-        const newIndex =  isLastSlide ? 0 : currentIndex + 1;
+    const moveToNext = () => {
+        const isLastSlide = currentIndex === slides.length - 1;
+        const newIndex = isLastSlide ? 0 : currentIndex + 1;
         setCurrentIndex(newIndex);
     }
 
@@ -37,13 +37,13 @@ const CardSlider = ({ slides }) => {
 
 
     return (
-        <div id="slider" className='h-[100%] relative'>
+        <div id="slider" className='h-[100%] relative '>
 
             {/* countdown */}
 
-            
-        <Countdown targetDate={targetDate} />
-        
+
+            <Countdown targetDate={targetDate} />
+
 
             {/* Arrows */}
             <div id="prevArrow"
@@ -60,23 +60,25 @@ const CardSlider = ({ slides }) => {
                 onClick={moveToPrevious}>
                 <TiMediaPlay className='w-[25px] h-[20px]' />
             </div>
+
+            {/* CARD */}
             <div id='slide' style={{ backgroundImage: `url(${slides[currentIndex].imgUrl})` }}
-                className='w-[100%} h-[100%] bg-center bg-cover rounded-[20px]'></div>
+                className='w-[100%] h-[100%] bg-center bg-cover rounded-[20px] scroll-smooth'></div>
 
             {/* slideLines  */}
-            <div id="slideLines" className='flex justify-center absolute left-[30%] z-10 bottom-20'>
+            <div id="slideLines" className='flex justify-center absolute left-[30%] z-10 bottom-20  scroll-smooth'>
                 {
                     slides.map((slide, slideIndex) => (
-                        <div key={slideIndex} className='mx-1  cursor-pointer' onClick={()=> moveToSlide(slideIndex)}>
-                            <AiOutlineLine size={20} className='w-[20px]  text-white '/>
+                        <div key={slideIndex} className='mx-1  cursor-pointer scroll-smooth' onClick={() => moveToSlide(slideIndex)}>
+                            <AiOutlineLine size={20} className='w-[20px]  text-white scroll-smooth' />
                         </div>
                     ))
                 }
             </div>
 
-            <ImageFooter className="z-1" slides={slides[currentIndex]}/>
-            <ImageIcons className="z-1"/>
-            <CardButton/>
+            <ImageFooter className="z-1" slides={slides[currentIndex]} />
+            <ImageIcons className="z-1" />
+
         </div>
     )
 }
