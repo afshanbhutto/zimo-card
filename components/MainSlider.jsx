@@ -5,11 +5,7 @@ import { mainSliderData } from "./mainSliderData";
 import Slider from "react-slick";
 import CardButton from "./CardButton";
 
-
-
 const MainSlider = () => {
-
-
   // FOR ARROWS MOVEMENT
   const sliderRef = useRef(null);
 
@@ -27,8 +23,8 @@ const MainSlider = () => {
           slidesToShow: 4,
           slidesToScroll: 1,
           infinite: true,
-          dots: true
-        }
+          dots: true,
+        },
       },
       {
         breakpoint: 1024,
@@ -36,28 +32,28 @@ const MainSlider = () => {
           slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
-          dots: false
-        }
+          dots: false,
+        },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          initialSlide: 2
-        }
+          initialSlide: 2,
+        },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
-
+  // FOR ARROWS MOVEMENT
   const goToNextSlide = () => {
     if (sliderRef.current) {
       sliderRef.current.slickNext();
@@ -79,15 +75,16 @@ const MainSlider = () => {
           View all Homes
         </div>
         <div className="flex-1  text-right  text-black text-5xl lg:text-6xl">
-          <span className="mr-4" onClick={goToPrevSlide}>&lt;</span>
-          <span onClick={goToNextSlide}>&gt;</span>
+          <button className="mr-4" onClick={goToPrevSlide}>
+            &lt;
+          </button>
+          <button onClick={goToNextSlide}>&gt;</button>
         </div>
       </div>
 
       <Slider {...settings} ref={sliderRef}>
-        {mainSliderData.map(item => item.card)}
+        {mainSliderData.map((item) => item.card)}
       </Slider>
-
     </div>
   );
 };
